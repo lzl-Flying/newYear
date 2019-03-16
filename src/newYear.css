@@ -1,0 +1,153 @@
+*{padding: 0;margin: 0;border: none;list-style: none;font-size: 1.56vw;}
+html,body {width: 100%;    height: 100%; overflow: hidden;}
+
+.music {position: fixed;top: 3vh;right: 4vw;z-index: 5;width: 15vw;height: 15vw;border: 3px solid #ef1639;border-radius: 50%;background: #fff;}
+.music > img:last-of-type {position: absolute;top: 24%;right: 2.5%;width: 28.42%;z-index: 1;}
+.music > img:first-of-type {position: absolute;top: 0;right: 0;bottom: 0;left: 0;margin: auto;width: 79%;z-index: 0;}
+.music > img.play {
+    -webkit-animation:music_play 4s linear infinite;
+            animation:music_play 4s linear infinite;
+}
+@-webkit-keyframes music_play {
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+@keyframes music_play {
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+    }
+}
+/* page bg */
+.page {position: absolute;width: 100%;height: 100%;}
+.page > .bg {position: absolute;width: 100%;height: 100%;z-index: -1;background-size: 100%;}
+
+/*page_1*/
+#page1 {display: block;}
+#page1 > .bg {background: url('./img/p1_bg.jpg') no-repeat center center;}
+#page1 .p1_lantern {position: absolute;top: -2%;left: 0;right: 0;margin: auto;z-index: 1;color:#fff;width: 45vw;height: 71.2vh;font-size: 3.5rem;padding-top: 31vh;text-align: center;box-sizing: border-box;background: url('./img/p1_lantern.png') no-repeat center;background-size: 100%;}
+#page1 .p1_lantern:before {position: absolute;top: -3.4%;right: 0;bottom: 0;left: 0;margin: auto;z-index: -1;width: 30vw;height: 30vw;content: '';background: #d60b3b;opacity: .5;border-radius: 50%;-webkit-box-shadow: 0 0 10vw 10vw #d60b3b;-moz-box-shadow: 0 0 10vw 10vw #d60b3b;-o-box-shadow: 0 0 10vw 10vw #d60b3b;box-shadow: 0 0 10vw 10vw #d60b3b;
+-webkit-animation: p1_lantern .5s infinite alternate;
+        animation: p1_lantern .5s infinite alternate;
+}
+@-webkit-keyframes p1_lantern {
+    0% {
+        opacity: 0.5;
+        -webkit-tranform: scale(0.8, 0.8);
+                tranform: scale(0.8, 0.8);
+    }
+    100% {
+        opacity: 1;
+        -webkit-tranform: scale(1, 1);
+                tranform: scale(1, 1);
+    }
+}
+@keyframes p1_lantern {
+    0% {
+        opacity: 0.5;
+        -webkit-tranform: scale(0.8, 0.8);
+                tranform: scale(0.8, 0.8);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#page1 .p1_imooc {position: absolute;right: 0;left: 0;bottom: 9vh;margin: auto;background: url('./img/p1_imooc.png') no-repeat center;background-size: 100%;width: 27.66vw;height: 18.63vh;}
+#page1 .p1_woeds {position: absolute;right: 0;left: 0;bottom: 48px;text-align: center;font-size: 2.13rem;color: #231815;}
+
+/*page_2*/
+#page2 {display: none;transition: 0.5s;}
+.fadeout {
+    opacity: 0.3;
+    transform: translateY(-100%);
+}
+#page2 .p2_loading {background: #ef1639;z-index: 4;animation: p2_loading 1s linear forwards;}
+@keyframes p2_loading {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+#page2 > .bg {background: url('./img/p2_bg.jpg') no-repeat center center;}
+#page2 .p2_circle {position: absolute;top: 0;right: 0;bottom: 0;left: 0;margin: auto;background: url('./img/p2_circle_outer.png') no-repeat center;background-size: 100%;width: 59.38vw;height: 59.38vw;
+animation: p2_circle_outer 1s linear 3s infinite;
+}
+@keyframes p2_circle_outer {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+#page2 .p2_circle:before {position: absolute;top: 0;right: 0;bottom: 0;left: 0;margin: auto;background: url('./img/p2_circle_middle.png') no-repeat center;background-size: 100%;width: 45.64vw;height: 45.64vw;content: '';
+animation: p2_circle_middle 1s linear 2s infinite;
+}
+@keyframes p2_circle_middle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-720deg)
+    }
+}
+
+#page2 .p2_circle:after {position: absolute;top: 0;right: 0;bottom: 0;left: 0;margin: auto;background: url('./img/p2_circle_inner.png') no-repeat center;background-size: 100%;width: 39.9vw;height: 39.9vw;content: '';
+animation: p2_circle_inner 1s linear 1s infinite;
+}
+@keyframes p2_circle_inner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(1080deg)
+    }
+}
+#page2 .p2_2019 {position: absolute;top: 0;right: 0;bottom: 0;left: 0;margin: auto;width: 30vw;height: 30vw;font-size: 7.5rem;line-height: 30vw;text-align: center;color: #eee;}
+
+/*page_3*/
+#page3 {display: none;transition: 0.5s}
+.fadein {
+    transform: translateY(-100%);
+}
+#page3 > .bg {background: url('./img/p3_bg.jpg') no-repeat center center;}
+#page3 .p3_logo {position: absolute;top: 9vh;right: 0;left: 0;margin: auto;width: 40vw;height: 7vh;font-size: 10vw;color: #edd;}
+#page3 .p3_title {position: absolute;top: 21vh;right: 0;left: 0;margin: auto;background: url('./img/p3_title.png') no-repeat center;background-size: 100%;width: 48.13vw;height: 50vh;}
+#page3 .p3_second {position: absolute;top: 25.48vh;left: 3.75vw;background: url('./img/p3_couplet_second.png') no-repeat center;background-size: 100%;width: 22.81vw;height: 41vh;
+animation: p3_first 0.5s infinite alternate;
+}
+#page3 .p3_first {position: absolute;top: 25.48vh;right: 3.75vw;background: url('./img/p3_couplet_first.png') no-repeat center;background-size: 100%;width: 22.81vw;height: 41vh;
+animation: p3_first 0.5s infinite alternate;
+}
+@keyframes p3_first {
+    0% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+#page3 .p3_blessing {position: absolute;bottom: 9vh;right: 0;left: 0;margin: auto;background: url('./img/p3_blessing.png') no-repeat center;background-size: 100%;width: 32vw;height: 32vw;border-radius: 50%;
+animation: p3_blessing 2s linear infinite;
+}
+@keyframes p3_blessing {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+
+
